@@ -179,10 +179,8 @@ let mixed = [4, '2', 5, '8', '9', 0, 1];
 // ・Number であり奇数の時は 'odd'
 // ・Number 以外の時は 'not number'
 for(let i = 0; i < mixed.length; i++) {
-  if (mixed[i] % 2 === 0 && typeof mixed[i] === 'number') {
-    console.log('even');
-  } else if (mixed[i] % 2 === 1 && typeof mixed[i] === 'number') {
-    console.log('odd');
+  if (typeof mixed[i] === 'number') {
+    console.log(mixed[i] % 2 === 0 ? 'even' : 'odd');
   } else {
     console.log('not number');
   }
